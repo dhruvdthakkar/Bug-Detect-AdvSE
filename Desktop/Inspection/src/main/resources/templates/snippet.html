@@ -16,10 +16,12 @@
 
 <form>
     <div class="form-group" style="padding: 5%; text-align: center">
-        <label for="exampleFormControlTextarea1">Write your code here!</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="12"></textarea>
-        <br />
-        <a href="/result" class="badge badge-primary">Generate Result</a>
+<!--        <form method="GET" th:action="@{/templates/result.html}">-->
+            <label for="exampleFormControlTextarea1">Write your code here!</label>
+            <textarea class="form-control" name="data" id="exampleFormControlTextarea1" rows="12"></textarea>
+            <br />
+            <a href="/result" class="badge badge-primary">Generate Result</a>
+<!--        </form>-->
     </div>
 </form>
 
