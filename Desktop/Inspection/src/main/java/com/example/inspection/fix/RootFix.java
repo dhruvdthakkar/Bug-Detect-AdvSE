@@ -1,14 +1,13 @@
 package com.example.inspection.fix;
 
+import com.example.inspection.DTO.Snippet;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class RootFix {
-    public static void helper(){
+    public static void helper(Snippet snippet){
         // Arithmetic.arithmetic();
         // NullPointer.nullCheck();
         try {

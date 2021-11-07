@@ -14,16 +14,22 @@
 
 <body>
 
-<form>
-    <div class="form-group" style="padding: 5%; text-align: center">
-<!--        <form method="GET" th:action="@{/templates/result.html}">-->
+
+<div style="margin: 30px; border: 1px black solid">
+    <!--/*@thymesVar id="snippet" type=""*/-->
+    <form action="#" th:action="@{/resultSnippet}" th:object="${snippet}" method="post">
+        <p>
+            Title of your code: <input type="text" th:field="*{id}">
+        </p>
+        <p>
             <label for="exampleFormControlTextarea1">Write your code here!</label>
-            <textarea class="form-control" name="data" id="exampleFormControlTextarea1" rows="12"></textarea>
-            <br />
-            <a href="/result" class="badge badge-primary">Generate Result</a>
-<!--        </form>-->
-    </div>
-</form>
+            <textarea class="form-control" name="data" id="exampleFormControlTextarea1" rows="12" th:field="*{content}"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+        </p>
+    </form>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

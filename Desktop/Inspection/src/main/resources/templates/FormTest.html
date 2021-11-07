@@ -34,32 +34,19 @@
     </div>
 </nav>
 
-<div style="text-align: center; margin: 10px">
-<!--    <img th:src="@{https://pics.freeicons.io/uploads/icons/png/8673219321553858097-512.png}" />-->
-    <h1>Inconsistent Code Detection</h1>
-    <div>
-        <div class="row" style="padding: 5%">
-
-            <div class="col-lg" style="padding: 10%; border: 1px solid black">
-                <a href="/upload">
-                    <p>Upload file</p>
-                </a>
-            </div>
-
-            <div class="col-lg" style="padding: 10%; border: 1px solid black">
-                <a href="/snippet">
-                    <p>Code snippet</p>
-                </a>
-            </div>
-
-            <div class="col-lg" style="padding: 10%; border: 1px solid black">
-                <a href="/github">
-                    <p>Github continues</p>
-                </a>
-            </div>
-        </div>
-    </div>
-
+<div style="margin: 30px; border: 1px black solid">
+    <!--/*@thymesVar id="snippet" type=""*/-->
+    <form action="#" th:action="@{/testResult}" th:object="${snippet}" method="post">
+        <p>
+            Name: <input type="text" th:field="*{id}">
+        </p>
+        <p>
+            Occupation: <input type="text" th:field="*{content}">
+        </p>
+        <p>
+            <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+        </p>
+    </form>
 </div>
 
 
