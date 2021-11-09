@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1>Spring Boot - Upload Status</h1>
+
+<div th:if="${message}">
+    <h2 th:text="${message}"/>
+    <p th:text="'Occupation: ' + ${result.temp}"></p>
+    <tr th:each="e : ${result.error}">
+        <td th:text="${e}"></td>
+        <br/>
+    </tr>
+</div>
+
+</body>
+</html>

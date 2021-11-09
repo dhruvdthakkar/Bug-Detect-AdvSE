@@ -10,4 +10,3 @@ public class InspectionApplication {
         SpringApplication.run(InspectionApplication.class, args);
     }
 }
-

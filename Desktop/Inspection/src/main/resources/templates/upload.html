@@ -35,10 +35,9 @@
 </nav>
 
 <div style="margin: 30px; border: 1px black solid">
-    <form action="/action_page.html">
-        <input type="file" id="myFile" name="filename">
-<!--        <input type="submit">-->
-        <a href="/result" class="badge badge-primary">Generate Result</a>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="file" /><br/><br/>
+        <input type="submit" value="Submit" />
     </form>
 </div>
 

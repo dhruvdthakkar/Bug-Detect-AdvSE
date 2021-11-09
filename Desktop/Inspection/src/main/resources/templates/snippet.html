@@ -19,9 +19,6 @@
     <!--/*@thymesVar id="snippet" type=""*/-->
     <form action="#" th:action="@{/resultSnippet}" th:object="${snippet}" method="post">
         <p>
-            Title of your code: <input type="text" th:field="*{id}">
-        </p>
-        <p>
             <label for="exampleFormControlTextarea1">Write your code here!</label>
             <textarea class="form-control" name="data" id="exampleFormControlTextarea1" rows="12" th:field="*{content}"></textarea>
         </p>

@@ -15,10 +15,9 @@
 <body>
     <ul class="list-group">
         <li class="list-group-item active">List of improvement: </li>
-        <li class="list-group-item">Remove checkFlag method of something class at line number 10 in A file due to null pointer</li>
-        <li class="list-group-item">Remove checkDatabase method of something class at line number 20 in B file due to thread safety.</li>
-        <li class="list-group-item">Adjust data constructor overloading of something class at line number 29 in C file due to dynamic dispatch.</li>
-        <li class="list-group-item">Adjust data constructor overloading of something class at line number 11 in file D due to dynamic dispatch.</li>
+        <ul class="list-group" th:each="e : ${result.error}">
+            <li class="list-group-item" th:text="${e}"></li>
+        </ul>
     </ul>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
