@@ -1,12 +1,10 @@
-package com.example.inspection.fix;
+package com.example.inspection.util;
 
 import com.example.inspection.DTO.Snippet;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Random;
 
 public class ParserForCode {
     public static void helper(Snippet snippet) {

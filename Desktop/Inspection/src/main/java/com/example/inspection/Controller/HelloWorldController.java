@@ -2,8 +2,8 @@ package com.example.inspection.Controller;
 
 import com.example.inspection.DTO.Result;
 import com.example.inspection.DTO.Snippet;
-import com.example.inspection.fix.ParserForCode;
-import com.example.inspection.fix.Parser;
+import com.example.inspection.bug_detect.Main;
+import com.example.inspection.util.ParserForCode;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -79,7 +79,7 @@ public class HelloWorldController
 
     @GetMapping("/uploadStatus")
     public String uploadStatus(Result result) {
-        result.setError(Parser.helper(result));
-        return "result";
+        Main.initSetup();
+        return "C:/Users/Dhruv Thakkar/Desktop/Inspection/results/report.html";
     }
 }
