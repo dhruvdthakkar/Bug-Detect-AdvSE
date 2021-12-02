@@ -1,5 +1,6 @@
 package com.example.inspection.bug_detect;
 
+
 import com.example.inspection.bug_detect.bugpatterns.BugPattern;
 import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
@@ -16,7 +17,7 @@ public class Util {
 
 
     private static void writeInFile(String content) throws IOException {
-        try (FileWriter fw = new FileWriter("templates/results/report.html", true);
+        try (FileWriter fw = new FileWriter("C:\\Users\\Dhruv Thakkar\\Desktop\\Inspection\\results\\report.html");
              BufferedWriter bw = new BufferedWriter(fw);
              PrintWriter out = new PrintWriter(bw)) {
             out.println(content);
@@ -25,21 +26,17 @@ public class Util {
 
 
     static void deleteFiles() {
-        File files = new File("templates/results/");
-        try {
-            for (File file: Objects.requireNonNull(files.listFiles())) {
-                file.delete();
-            }
+        File files = new File("C:\\Users\\Dhruv Thakkar\\Desktop\\Inspection\\results\\");
+        for (File file: Objects.requireNonNull(files.listFiles())) {
+            file.delete();
         }
-        catch (Exception e){
-            System.out.println("Not deleted!");
-        }
+
     }
 
 
     static void generateReport(File path, List<BugPattern> bugPatterns) {
         try {
-            String htmlString = new String(Files.readAllBytes(Paths.get("templates/resources/report-template.html")),
+            String htmlString = new String(Files.readAllBytes(Paths.get("C:\\Users\\Dhruv Thakkar\\Desktop\\Inspection\\resources\\report-template.html")),
                     StandardCharsets.UTF_8);
 
 

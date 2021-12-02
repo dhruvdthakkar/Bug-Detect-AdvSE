@@ -9,13 +9,13 @@ import java.io.IOException;
 public class ParserForCode {
     public static void helper(Snippet snippet) {
         try {
-            File myObj = new File("C://Users//Dhruv Thakkar//Desktop//Inspection//src//main//resources//static//filename4.java");
+            File myObj = new File("C:\\Users\\Dhruv Thakkar\\Desktop\\Inspection\\src\\main\\resources\\static\\fileforparse.java");
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
                 System.out.println("File already exists.");
             }
-            FileWriter writeIn = new FileWriter("C://Users//Dhruv Thakkar//Desktop//Inspection//src//main//resources//static//filename4.java");
+            FileWriter writeIn = new FileWriter("C:\\Users\\Dhruv Thakkar\\Desktop\\Inspection\\src\\main\\resources\\static\\fileforparse.java");
             writeIn.write(snippet.getContent());
             writeIn.close();
         } catch (IOException e) {

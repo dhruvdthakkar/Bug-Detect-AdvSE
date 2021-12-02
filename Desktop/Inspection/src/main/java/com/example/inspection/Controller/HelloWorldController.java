@@ -4,6 +4,7 @@ import com.example.inspection.DTO.Result;
 import com.example.inspection.DTO.Snippet;
 import com.example.inspection.bug_detect.Main;
 import com.example.inspection.util.ParserForCode;
+import com.example.inspection.util.UtilMy;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -65,7 +66,7 @@ public class HelloWorldController
 
             // Get the file and save it somewhere
             byte[] bytes = file.getBytes();
-            Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
+            Path path = Paths.get(UPLOADED_FOLDER + "fileforparse.java");
             Files.write(path, bytes);
 
             redirectAttributes.addFlashAttribute("message",
@@ -80,6 +81,7 @@ public class HelloWorldController
     @GetMapping("/uploadStatus")
     public String uploadStatus(Result result) {
         Main.initSetup();
-        return "C:/Users/Dhruv Thakkar/Desktop/Inspection/results/report.html";
+        new UtilMy().fileWrite();
+        return "result";
     }
 }

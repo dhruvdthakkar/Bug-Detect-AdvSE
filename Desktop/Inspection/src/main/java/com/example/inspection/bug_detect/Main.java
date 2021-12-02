@@ -21,7 +21,7 @@ public class Main {
     {
         Util.deleteFiles();
 
-        File projectDir = new File("C:\\Users\\Dhruv Thakkar\\Downloads\\Feedback Form Management System Java-Using Swing MySql\\Feedback Form Management System Java-Using Swing MySql\\Project\\Admin\\AdminLogin.java");
+        File projectDir = new File("C:\\Users\\Dhruv Thakkar\\Desktop\\Inspection\\src\\main\\resources\\static\\fileforparse.java");
     
         Set<BugPattern> bugPatterns = new HashSet<>();
         Checker checker = new EqualsHashcodeChecker();
@@ -52,7 +52,8 @@ public class Main {
 
         checker = new IneffectiveConditionChecker();
         bugPatterns.addAll(checker.check(projectDir));
-        
+
+        System.out.println("Hit");
         System.out.println(bugPatterns);
 
         Util.generateReport(projectDir, new ArrayList(bugPatterns));
